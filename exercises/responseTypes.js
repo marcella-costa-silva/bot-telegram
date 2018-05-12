@@ -14,6 +14,7 @@ bot.start(async ctx => {
     {caption: 'Já tomou o seu café hoje?'})
   await ctx.replyWithPhoto({url: 'https://amenteemaravilhosa.com.br/wp-content/uploads/2016/06/Cafe%CC%811-1024x768-1024x768.jpg'})
   await ctx.replyWithLocation(29.9773008, 31.1303068)
+  // await ctx.replyWithVideo('')
 })
 
 bot.startPolling()
