@@ -8,7 +8,7 @@ const tecladoCarne = Markup.keyboard([
   ['🐔 Galinha', '🐣 Eu como é ovo'],
   ['🐟 Peixe', '🐙 Frutos do mar'],
   ['🍄 Eu sou vegetariano']
-]).resize().extra()
+]).resize().extra() // resize(): redimensiona o teclado | extra(): renderiza o teclado.
 
 bot.start(async ctx => {
   await ctx.reply(`Seja bem-vindo(a), ${ctx.update.message.from.first_name}!`)
@@ -16,6 +16,7 @@ bot.start(async ctx => {
   Markup.keyboard(['Coca-cola', 'Pepsi']).resize().oneTime().extra())
 })
 
+// Escutando a resposta.
 bot.hears(['Coca-cola', 'Pepsi'], async ctx => {
   await ctx.reply(`Nossa, eu também AMO ${ctx.match}`)
   await ctx.reply('Qual seu tipo de carne preferido?', tecladoCarne)
